@@ -10,6 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
     <style>
+		.bizz-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.bizz-card {
+  width: 100%;
+  max-width: 820px; /* adjust if you want it bigger or smaller */
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+}
+
         body {
             font-family: 'Bricolage Grotesque', sans-serif;
             background-color: #000000;
@@ -89,6 +104,36 @@
     <!-- Hero Section -->
     <header class="pt-32 pb-20 text-center bg-black">
         <div class="container mx-auto px-6">
+			<style>
+  /* Softer, tighter green glow */
+  .glow-check {
+    filter: drop-shadow(0 0 2px #c4ff0d) drop-shadow(0 0 4px #c4ff0d80);
+  }
+</style>
+
+<div class="flex justify-center flex-wrap gap-3 mb-8">
+  <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c4ff0d]/60 bg-black text-[#c4ff0d] text-sm font-medium shadow-[0_0_15px_#c4ff0d30]">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 glow-check" fill="none" viewBox="0 0 24 24" stroke="#c4ff0d" stroke-width="3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    NFC Tap
+  </div>
+
+  <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c4ff0d]/60 bg-black text-[#c4ff0d] text-sm font-medium shadow-[0_0_15px_#c4ff0d30]">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 glow-check" fill="none" viewBox="0 0 24 24" stroke="#c4ff0d" stroke-width="3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    QR Code Share
+  </div>
+
+  <div class="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c4ff0d]/60 bg-black text-[#c4ff0d] text-sm font-medium shadow-[0_0_15px_#c4ff0d30]">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 glow-check" fill="none" viewBox="0 0 24 24" stroke="#c4ff0d" stroke-width="3">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+    Phone Wallet Ready
+  </div>
+</div>
+
 <h1 class="text-[2.75rem] md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] md:leading-[1.05] normal-case">
     Business Cards <br> for <span class="text-brand-lime">Adults.</span>
 </h1>
@@ -97,17 +142,25 @@
 
 
             <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
-                Stop carrying around tree corpses with outdated info. Create a digital business card that lives in your phone's wallet, forever.
+               Grow up and get your digital business card. <br> Share it once, they keep it forever, you update it anytime.
+
+
+
             </p>
             <a href="#generator" class="mt-10 btn btn-lime text-lg">
                 Create Yours in 2 Minutes
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
+		<div class="bizz-card-container">
+  <img src="image/bizzcard.jpg" alt="Bizz Digital Business Card" class="bizz-card" />
+</div>
+
     </header>
 
     <!-- The Problem Section -->
-    <section class="py-20 bg-black">
+    <section class="py-0 bg-black -mt-12">
+
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white">In 2025, This is Embarrassing.</h2>
             <p class="mt-4 max-w-xl mx-auto text-gray-500">Business cards haven't changed in a century. It's time to stop the cringe.</p>
@@ -136,14 +189,14 @@
     <section id="generator" class="py-20 bg-[#050505]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl lg:text-6xl druk-font text-white">THE <span class="text-brand-lime">SOLUTION</span> IS ALREADY <br>IN YOUR POCKET.</h2>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl druk-font text-white normal-case">The <span class="text-brand-lime">Solution</span> is Already <br>in Your Pocket.</h2>
                 <p class="mt-4 max-w-xl mx-auto text-gray-400">No app to download. No new behaviors to learn. Bizz lives in the Apple or Google Wallet you use every single day.</p>
             </div>
            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                 
                 <!-- Form Section -->
-                <div class="w-full">
-                    <h3 class="text-2xl font-bold text-white mb-6">1. Fill in your details.</h3>
+                <div class="w-full max-w-sm mx-auto lg:mx-0 lg:ml-auto">
+                    <h3 class="text-2xl font-bold text-white mb-6">1. Fill in your details</h3>
                     <form id="cardForm" class="space-y-4">
                         <input type="text" id="fullName" name="fullName" placeholder="Full Name" class="form-input">
                         <input type="text" id="jobTitle" name="jobTitle" placeholder="Job Title" class="form-input">
@@ -155,10 +208,10 @@
                 </div>
 
                 <!-- Card Preview and Actions -->
-               <div class="w-full flex flex-col justify-start">
-    <h3 class="text-2xl font-bold text-white mb-6">2. Share your card.</h3>
-                    <div class="flex flex-col items-left">
-                        <div id="cardPreview" class="bg-[#121212] w-full max-w-sm rounded-2xl p-8 shadow-2xl border border-[#222] flex flex-col items-center text-center transition-all duration-300 ease-in-out card-glow">
+               <div class="w-full max-w-sm mx-auto lg:mx-0 lg:mr-auto flex flex-col justify-start">
+    <h3 class="text-2xl font-bold text-white mb-6">2. Share your card</h3>
+                    <div class="flex flex-col items-center">
+                        <div id="cardPreview" class="bg-[#121212] w-full rounded-2xl p-8 shadow-2xl border border-[#222] flex flex-col items-center text-center transition-all duration-300 ease-in-out card-glow">
                             <div class="w-28 h-28 bg-[#1a1a1a] rounded-lg mb-5 flex items-center justify-center border border-[#333]">
                                 <div id="qrCode" class="p-1.5 bg-white rounded-md flex items-center justify-center"></div>
                             </div>
@@ -172,7 +225,7 @@
                                 <p id="previewWebsite" class="flex items-center text-sm text-gray-300"><svg class="w-4 h-4 mr-3 text-gray-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 00-9-9m-9 9h18"></path></svg> <span class="truncate">https://www.bizz.com</span></p>
                             </div>
                         </div>
-                        <div class="w-full max-w-sm mt-8 space-y-3">
+                       <div class="w-full mt-8 space-y-3">
                             <button id="downloadVcf" class="w-full btn btn-lime">Download Contact File (.vcf)</button>
                             <div class="grid grid-cols-2 gap-3">
                               <button id="appleWalletBtn" class="w-full bg-transparent border-0 p-0 cursor-pointer hover:opacity-80 transition-opacity">
@@ -190,7 +243,7 @@
     </section>
 
     <!-- Why Bizz Section -->
-    <section class="py-20 bg-black">
+    <section class="py-5 bg-black -mt-12">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-white">Networking shouldn't feel like business.</h2>
